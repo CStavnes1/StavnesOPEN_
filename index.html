@@ -1,54 +1,272 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=UTF-8>
-        <title> Chris's Bio</title>
-        <link rel="stylesheet"> <a href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"></a>
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body>
-        <header>
-            <div><img src="http://placepuppy.net/300/300" alt="Chris"></div>
-            <div>
-                <h1>Chris</h1>
-                <ul>
-                    <li>apples</li>
-                    <li>oranges</li>
-                    <li>bananas</li>
-                </ul>
-            </div>
-        </header>
-        <main>
-            <section>
-                <div>
-                    <h2>Education</h2>
-                    <ul>
-                        <li>oak grove</li>
-                        <li>jefferson</li>
-                        <li>minnesota</li>
-                    </ul>
-                </div>
-            </section>
-            <footer>
-                <div>
-                    <h2>Connections</h2>
-                    <ul>
-                        <li><a href="http://facebook.com">Facebook</a></li>
-                        <li><a href="http://github.com">Git Hub</a></li>
-                        <li><a href="http://linkedin.com">Linkedin</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <p>Sint laboris consequat officia sit commodo tempor magna sint minim elit sunt cillum veniam dolore. Ea est cillum adipisicing ea eu ullamco et culpa tempor nisi id cupidatat. Laborum ad excepteur minim duis laborum qui mollit nisi veniam duis.</p>
-                </div>
-            </footer>
-                <div>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-        </main>
-    </body>
+<html lang="en">
+<head>
+  <title>Stavnes Open</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--Firebase Reference-->
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <!--font-->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 374px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .table {
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+  body {
+    background-color: #272727
+  }
+  .tourninfo {
+    color:#FFFFFF;
+    
+  }
+  p {
+    color:#FFFFFF;
+  }
+  .desc {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+
+
+  .col-sm-4 {
+    color:#272727;
+  }
+  .champs{
+    color:#ffe400;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #272727;
+  }
+  .cimages {
+    width: 400px;
+    opacity: 0.75;
+    
+  }
+  .footer {
+    color: #272727;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <!-- <li><a href="#">Home</a></li> -->
+        <li><a href="#">Tournamnet</a></li>
+        <!-- <li><a href="#">Champions Dinner</a></li> -->
+        <!-- <li><a href="#">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="width:100%; height: 300px;">
+        <img class="cimages" src="https://static1.squarespace.com/static/52969c2be4b0c5f2207b2690/52c6f36ce4b0c2f00150456f/53e3f0afe4b0e0b89362d191/1407447603608/ChaskaTC9.jpg" alt="Image">
+        <div class="carousel-caption">
+          <h1>The 2018 Stavnes Open</h1>
+          <h3>Chaska Town Course</h3>
+        </div>      
+      </div>
+
+      <div class="item" style="width:100%; height: 300px;">
+        <img class="cimages" src="http://www.journalmpls.com/wp-content/uploads/2018/05/hideaway-web-1.jpg" alt="Image">
+        <div class="carousel-caption">
+          <br></br>
+          <h4>Inaugural Champions Dinner</h4>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <h3 class="tourninfo">2018 Stavnes Open</h3>
+  <h4 class="tourninfo">Saturday Aug, 4th</h4>
+
+
+
+  <div class="row">
+    <div class="col-sm-4">
+      <a href="http://www.chaskatowncourse.com/">
+        <img src="http://cdn.cybergolf.com/images/1036/content-wrapper-backstretch_bg-hole-18-1920by1280-web.jpg" class="img-responsive" style="width:100%" alt="Image">
+      </a>
+        <p class="desc">Designed by renowned golf course architect Arthur Hills, the Chaska Town Course sprawls over 285 acres of oak groves, open prairie and marshlands.</p>
+    </div>
+    <div class="col-sm-4 champdinner"> 
+      <a href="http://hideawayburgerbar.com/">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipM-BSe_OdVYqtnovF59aqanB7creJp99a_DHhCh=w284-h160-k-no" class="img-responsive" style="width:100%" alt="Image">
+      </a>
+      <p>Champions Dinner</p>
+      <p>Fri, Aug 3 7pm</p>   
+    </div>
+
+
+
+
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">2018 Registration</div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for=""></label>
+                <input type="text" id="player-name" class="form-control" placeholder="First and Last Name">
+              </div>
+
+              <button type="submit" id="add-player" class="btn btn-default">Register</button>
+
+            </form>
+          </div>
+      <table class="table" id="player-table">
+        <thead>
+          <tr>
+            <th>Players 2018</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      </div>
+    </div>
+  </div>
+</div><br>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading champs">Champions</div>
+    <div class="panel-body">
+      <table class="table table-hover" id="train-table">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Champions</th>
+            <th>Course</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="champs">2017</td>
+            <td class="champs">Chris Stavnes & Dan Langaard</td>
+            <td class="champs">Willingers Golf CLub</td>
+          </tr>
+          <tr>
+            <td class="champs">2016</td>
+            <td class="champs">Patrick Middlestaedt & David Hedlund </td>
+            <td class="champs">Bluff Creek Golf Course</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+
+
+
+<footer class="container-fluid text-center">
+  <p class="footer">Stavnes Open&trade;</p>
+</footer>
+
+
+<!--Javascript for Stavnes Open Website-->
+<script>
+  // Initialize Firebase
+  let config = {
+    apiKey: "AIzaSyAde0EpZCevRIEzaHLGypWcVaeAt4wWTuc",
+    authDomain: "stavnes-open.firebaseapp.com",
+    databaseURL: "https://stavnes-open.firebaseio.com",
+    projectId: "stavnes-open",
+    storageBucket: "stavnes-open.appspot.com",
+    messagingSenderId: "261812810471"
+  };
+  firebase.initializeApp(config);
+  let database = firebase.database();
+  $("#add-player").on("click", function(e) {
+    event.preventDefault();
+    let pName = $("#player-name").val().trim();
+    //console.log(pName);
+    let players = {
+      Player: pName
+    };
+    database.ref().push(players);
+    alert("Welcome to the Stavnes Open");
+    //clear for the next player
+    $("#player-name").val("");
+  })
+  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+    console.log(childSnapshot.val())
+    let pName = childSnapshot.val().Player
+    console.log(pName)
+    //append database info to the table
+    $("#player-table").append("<tr><td>" + pName )
+  });
+</script>
+
+
+
+
+
+
+
+
+</body>
 </html>
